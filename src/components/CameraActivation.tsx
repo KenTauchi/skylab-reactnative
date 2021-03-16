@@ -26,7 +26,7 @@ const CameraActivation: FC = () => {
     <Button style={styles.iconContainer} onPress={openCamera}>
       <Icon
         type="MaterialCommunityIcons"
-        name="camera-plus-outline"
+        name="camera-plus"
         style={styles.icon}
       />
     </Button>
@@ -34,31 +34,9 @@ const CameraActivation: FC = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  camera: {
-    flex: 1,
-    width: "100%",
-  },
-  buttonContainer: {
-    flex: 1,
-    backgroundColor: "transparent",
-    flexDirection: "row",
-    margin: 20,
-  },
-  button: {
-    flex: 0.1,
-    alignSelf: "flex-end",
-    alignItems: "center",
-  },
-  text: {
-    fontSize: 18,
-    color: "white",
-  },
   iconContainer: {
-    height: 70,
-    width: 70,
+    height: 65,
+    width: 65,
     borderRadius: 35,
     display: "flex",
     justifyContent: "center",
@@ -66,6 +44,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     bottom: 30,
     right: 30,
+    backgroundColor: "#501887",
   },
   icon: {
     fontSize: 32,

@@ -10,6 +10,9 @@ import { albumData } from "../data";
 const AlbumScreen: FC = () => {
   return (
     <View style={styles.screenContainer}>
+      <View style={styles.MenuBarContainer}>
+        <Icon type="Entypo" name="menu" style={styles.menuIcon} />
+      </View>
       <ScrollView showsVerticalScrollIndicator={false}>
         {albumData.map((album, index) => (
           <AlbumSingleRow data={album} key={index} />
@@ -25,22 +28,16 @@ export default AlbumScreen;
 const styles = StyleSheet.create({
   screenContainer: {
     flex: 1,
-    backgroundColor: "#dfe3ee",
+    backgroundColor: "#d3d7de",
     paddingHorizontal: 16,
     paddingTop: 32,
   },
-  iconContainer: {
-    height: 70,
-    width: 70,
-    borderRadius: 35,
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    position: "absolute",
-    bottom: 30,
-    right: 30,
+  MenuBarContainer: {
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    marginVertical: 16,
   },
-  icon: {
-    fontSize: 32,
+  menuIcon: {
+    color: "#501887",
   },
 });
