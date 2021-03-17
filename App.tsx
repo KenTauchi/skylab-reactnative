@@ -7,9 +7,6 @@ import AlbumScreen from "./src/screens/AlbumScreen";
 
 const App: FC = () => {
   return (
-    // <View style={styles.container}>
-    //   <HomeScreen />
-    // </View>
     <NativeRouter>
       <View style={styles.container}>
         <Switch>

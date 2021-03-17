@@ -102,16 +102,19 @@ const styles = StyleSheet.create({
   },
   agreementContainer: {
     flexDirection: "row",
-    justifyContent: "space-evenly",
+    justifyContent: "center",
     position: "absolute",
     bottom: 20,
   },
   agreementText: {
-    fontSize: 8,
+    fontSize: 9.5,
+    color: "#a8a8a8",
   },
   agreementBoldText: {
     fontWeight: "bold",
-    fontSize: 8,
+    fontSize: 9.5,
+    marginHorizontal: 3,
+    color: "#a8a8a8",
   },
 });
 

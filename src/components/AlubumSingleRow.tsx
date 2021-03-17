@@ -4,17 +4,6 @@ import { Icon } from "native-base";
 import { albumData, album } from "../data";
 import SingleImage from "./SingleImage";
 
-// defining the type of each property in the object passed as a prop
-// type dataType = {
-//   albumTitle: string;
-//   images: any[];
-// };
-
-// // // defining the type of props to pass to the component
-// interface dataProps {
-//   data: dataType;
-// }
-
 const AlubumSingleRow: FC<{ album: album }> = ({ album }) => {
   return (
     <View style={styles.container}>
@@ -32,7 +21,6 @@ const AlubumSingleRow: FC<{ album: album }> = ({ album }) => {
           style={{ color: "#9bcdde" }}
         />
       </View>
-
       <FlatList
         horizontal
         data={album.images}
