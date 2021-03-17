@@ -6,21 +6,37 @@ import figure5 from "../assets/albumImages/figure5.png";
 import figure6 from "../assets/albumImages/figure6.png";
 import figure7 from "../assets/albumImages/figure7.png";
 
-export const albumData = [
+// defining the type of props to pass to the component
+
+type image = HTMLImageElement;
+type imageArr = image[];
+interface album {
+  id: number;
+  albumTitle: string;
+  images: imageArr;
+}
+
+const albumData: album[] = [
   {
+    id: 1,
     albumTitle: "1touch",
-    image: [figure1],
+    images: [figure1],
   },
   {
+    id: 2,
     albumTitle: "Album Name",
-    image: [figure2, figure3, figure4],
+    images: [figure2, figure3, figure4],
   },
   {
+    id: 3,
     albumTitle: "Album Name",
-    image: [figure5, figure6],
+    images: [figure5, figure6],
   },
   {
+    id: 4,
     albumTitle: "Album Name",
-    image: [figure7],
+    images: [figure7],
   },
 ];
+
+export { image, imageArr, album, albumData };

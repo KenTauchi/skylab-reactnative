@@ -1,11 +1,10 @@
 import React, { FC } from "react";
-import { StyleSheet, Text, View, ScrollView } from "react-native";
+import { StyleSheet, Text, View, ScrollView, FlatList } from "react-native";
 import { Icon, Button } from "native-base";
-import { Link } from "react-router-native";
 
 import AlbumSingleRow from "../components/AlubumSingleRow";
 import CameraActivation from "../components/CameraActivation";
-import { albumData } from "../data";
+import { albumData, album } from "../data";
 
 const AlbumScreen: FC = () => {
   return (
@@ -13,11 +12,12 @@ const AlbumScreen: FC = () => {
       <View style={styles.MenuBarContainer}>
         <Icon type="Entypo" name="menu" style={styles.menuIcon} />
       </View>
-      <ScrollView showsVerticalScrollIndicator={false}>
-        {albumData.map((album, index) => (
-          <AlbumSingleRow data={album} key={index} />
-        ))}
-      </ScrollView>
+      <FlatList
+        showsVerticalScrollIndicator={false}
+        data={albumData}
+        keyExtractor={(item) => `${item.id}`}
+        renderItem={({ item }) => <AlbumSingleRow album={item} />}
+      />
       <CameraActivation />
     </View>
   );

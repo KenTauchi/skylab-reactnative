@@ -1,35 +1,21 @@
 import React, { FC } from "react";
-import { StyleSheet, View } from "react-native";
-import {
-  Container,
-  Header,
-  Content,
-  Card,
-  CardItem,
-  Text,
-  Icon,
-  Left,
-  Right,
-  Thumbnail,
-  H2,
-  H3,
-} from "native-base";
-
-import figure1 from "../../assets/albumImages/figure1.png";
+import { StyleSheet, View, Text, FlatList } from "react-native";
+import { Icon } from "native-base";
+import { albumData, album } from "../data";
 import SingleImage from "./SingleImage";
 
 // defining the type of each property in the object passed as a prop
-type dataType = {
-  albumTitle: string;
-  image: any[];
-};
+// type dataType = {
+//   albumTitle: string;
+//   images: any[];
+// };
 
-// defining the type of props to pass to the component
-interface dataProps {
-  data: dataType;
-}
+// // // defining the type of props to pass to the component
+// interface dataProps {
+//   data: dataType;
+// }
 
-const AlubumSingleRow: FC<dataProps> = ({ data }) => {
+const AlubumSingleRow: FC<{ album: album }> = ({ album }) => {
   return (
     <View style={styles.container}>
       <View
@@ -39,18 +25,20 @@ const AlubumSingleRow: FC<dataProps> = ({ data }) => {
           marginBottom: 10,
         }}
       >
-        <Text style={{ marginLeft: 32, fontSize: 20 }}>{data.albumTitle}</Text>
+        <Text style={{ marginLeft: 32, fontSize: 20 }}>{album.albumTitle}</Text>
         <Icon
           type="FontAwesome"
           name="angle-right"
           style={{ color: "#9bcdde" }}
         />
       </View>
-      <View style={{ flexDirection: "row" }}>
-        {data.image.map((img, index) => (
-          <SingleImage image={img} key={index} />
-        ))}
-      </View>
+
+      <FlatList
+        horizontal
+        data={album.images}
+        keyExtractor={(item) => `${item}`}
+        renderItem={({ item }) => <SingleImage img={item} />}
+      />
     </View>
   );
 };

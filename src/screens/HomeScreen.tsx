@@ -1,16 +1,8 @@
-import { StatusBar } from "expo-status-bar";
-import React, { FC, useState, useEffect } from "react";
+import React, { FC, useState } from "react";
 import { StyleSheet, View, Image, Text } from "react-native";
-import { H1, H3 } from "native-base";
-import { NativeRouter, Route, BackButton } from "react-router-native";
-import {
-  Button,
-  Card,
-  CardItem,
-  Container,
-  Header,
-  Content,
-} from "native-base";
+import { H1 } from "native-base";
+import { NativeRouter, Route } from "react-router-native";
+import { Button, Card, CardItem } from "native-base";
 import * as ImagePicker from "expo-image-picker";
 
 import homeimg from "../../assets/homeimg.png";
@@ -19,6 +11,7 @@ import AlbumScreen from "./AlbumScreen";
 const HomeScreen: FC = () => {
   const [selectedImage, setSelectedImage] = useState<null | string>(null);
 
+  //   checking permisssion before opening imagepicker
   let openImagePickerAsync = async () => {
     let permissionResult = await ImagePicker.requestMediaLibraryPermissionsAsync();
 

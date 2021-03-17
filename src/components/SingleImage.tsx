@@ -1,17 +1,13 @@
 import React, { FC } from "react";
 import { View, Text, StyleSheet } from "react-native";
+import { albumData, album, image } from "../data";
 
 import { Thumbnail } from "native-base";
 
-// defining the type of props to pass to the component
-interface imageProps {
-  image: HTMLImageElement;
-}
-
-const SingleImage: FC<imageProps> = ({ image }) => {
+const SingleImage: FC<{ img: image }> = ({ img }) => {
   return (
     <View>
-      <Thumbnail square source={image} style={styles.thumbnail} />
+      <Thumbnail square source={img} style={styles.thumbnail} />
       <View style={styles.checkCircle}></View>
     </View>
   );
