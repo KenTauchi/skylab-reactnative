@@ -12,5 +12,5 @@ yarn start
 
 ## Emulator Camera Roll Accessibility
 
-Since both android and iOS emulator do not have accessibility to camera,
-please nake sure to use your own mobile device to test the app.
+Since both Android and iOS emulator do not have accessibility to the camera,
+please make sure to use your own mobile device to test the app.
