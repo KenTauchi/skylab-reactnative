@@ -28,7 +28,6 @@ yarn start
 expo start
 ```
 
-# Emulator Camera Roll Accessibility
+# Emulator Camera Accessibility
 
-Since both Android and iOS emulator do not have accessibility to the camera,
-please make sure to use your own mobile device to test the camera roll.
+Since both Android and iOS emulator do not have accessibility to the camera, please make sure to use your own mobile device to test the camera function.
