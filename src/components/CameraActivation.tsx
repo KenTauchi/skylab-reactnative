@@ -4,16 +4,15 @@ import { Icon, Button } from "native-base";
 import * as ImagePicker from "expo-image-picker";
 
 const CameraActivation: FC = () => {
-  let openCamera = async () => {
-    let permissionResult = await ImagePicker.getCameraPermissionsAsync();
+  const openCamera = async () => {
+    const permissionResult = await ImagePicker.getCameraPermissionsAsync();
 
     if (permissionResult.granted === false) {
       alert("Permission to access camera roll is required!");
       return;
     }
 
-    let cameraResult = await ImagePicker.launchCameraAsync();
-    console.log(cameraResult);
+    ImagePicker.launchCameraAsync();
   };
 
   return (

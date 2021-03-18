@@ -11,17 +11,15 @@ import AlbumScreen from "./AlbumScreen";
 const HomeScreen: FC = () => {
   const [selectedImage, setSelectedImage] = useState<null | string>(null);
 
-  //   checking permisssion before opening imagepicker
-  let openImagePickerAsync = async () => {
-    let permissionResult = await ImagePicker.requestMediaLibraryPermissionsAsync();
+  const openImagePicker = async () => {
+    const permissionResult = await ImagePicker.requestMediaLibraryPermissionsAsync();
 
     if (permissionResult.granted === false) {
       alert("Permission to access camera roll is required!");
       return;
     }
 
-    let pickerResult = await ImagePicker.launchImageLibraryAsync();
-    console.log(pickerResult);
+    const pickerResult = await ImagePicker.launchImageLibraryAsync();
 
     pickerResult.cancelled === true ? null : setSelectedImage(pickerResult.uri);
   };
@@ -46,7 +44,7 @@ const HomeScreen: FC = () => {
       </Card>
 
       <Text style={styles.description}>Select a photo to start</Text>
-      <Button block style={styles.button} onPress={openImagePickerAsync}>
+      <Button block style={styles.button} onPress={openImagePicker}>
         <Text style={styles.buttonText}>SELECT PHOTO</Text>
       </Button>
       <View style={styles.agreementContainer}>
