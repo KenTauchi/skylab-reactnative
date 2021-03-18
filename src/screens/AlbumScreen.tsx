@@ -4,7 +4,7 @@ import { Icon } from "native-base";
 
 import AlbumSingleRow from "../components/AlubumSingleRow";
 import CameraActivation from "../components/CameraActivation";
-import { albumData } from "../data";
+import { albumData } from "../lib/data";
 
 const AlbumScreen: FC = () => {
   return (

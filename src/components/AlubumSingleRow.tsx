@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { StyleSheet, View, Text, FlatList } from "react-native";
 import { Icon } from "native-base";
-import { album } from "../data";
+import { album } from "../lib/data";
 import SingleImage from "./SingleImage";
 
 const AlubumSingleRow: FC<{ album: album }> = ({ album }) => {
