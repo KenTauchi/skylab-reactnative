@@ -1,6 +1,6 @@
 import React, { FC } from "react";
-import { View, Text, StyleSheet } from "react-native";
-import { albumData, album, image } from "../data";
+import { View, StyleSheet } from "react-native";
+import { image } from "../data";
 
 import { Thumbnail } from "native-base";
 

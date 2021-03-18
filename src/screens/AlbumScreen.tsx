@@ -1,10 +1,10 @@
 import React, { FC } from "react";
-import { StyleSheet, Text, View, ScrollView, FlatList } from "react-native";
-import { Icon, Button } from "native-base";
+import { StyleSheet, View, FlatList } from "react-native";
+import { Icon } from "native-base";
 
 import AlbumSingleRow from "../components/AlubumSingleRow";
 import CameraActivation from "../components/CameraActivation";
-import { albumData, album } from "../data";
+import { albumData } from "../data";
 
 const AlbumScreen: FC = () => {
   return (

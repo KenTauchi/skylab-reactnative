@@ -15,7 +15,7 @@ yarn add expo
 If you use npm to install expo, please also install these packages with the command below:
 
 ```bash
-expo install expo-camera expo-image-picker
+expo install expo-image-picker
 ```
 
 Please run the development server second:

@@ -4,10 +4,6 @@ import { Icon, Button } from "native-base";
 import * as ImagePicker from "expo-image-picker";
 
 const CameraActivation: FC = () => {
-  //   const [activateCamera, setActivateCamera] = useState<null | boolean>(false);
-  //   const [type, setType] = useState<string>(Camera.Constants.Type.back);
-  //   const [image, setImage] = useState<null | string>(null);
-
   let openCamera = async () => {
     let permissionResult = await ImagePicker.getCameraPermissionsAsync();
 
@@ -18,8 +14,6 @@ const CameraActivation: FC = () => {
 
     let cameraResult = await ImagePicker.launchCameraAsync();
     console.log(cameraResult);
-
-    // cameraResult.cancelled === true ? null : setImage(cameraResult.uri);
   };
 
   return (

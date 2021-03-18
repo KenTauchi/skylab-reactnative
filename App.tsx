@@ -1,5 +1,5 @@
-import React, { FC, useState, useEffect } from "react";
-import { StyleSheet, View, Image, Text } from "react-native";
+import React, { FC } from "react";
+import { StyleSheet, View } from "react-native";
 import { NativeRouter, Switch, Route } from "react-router-native";
 
 import HomeScreen from "./src/screens/HomeScreen";

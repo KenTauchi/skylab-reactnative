@@ -6,8 +6,6 @@ import figure5 from "../assets/albumImages/figure5.png";
 import figure6 from "../assets/albumImages/figure6.png";
 import figure7 from "../assets/albumImages/figure7.png";
 
-// defining the type of props to pass to the component
-
 type image = HTMLImageElement;
 type imageArr = image[];
 interface album {
