@@ -1,3 +1,5 @@
+# Description
+
 This is a tech assessment app for Skylab Technologies Inc with Expo for React Native and TypeScript.
 
 ## Getting Started
@@ -10,7 +12,7 @@ npm install expo
 yarn add expo
 ```
 
-- If you use npm to install expo, please also install these packages with the command below:
+If you use npm to install expo, please also install these packages with the command below:
 
 ```bash
 expo install expo-camera expo-image-picker
@@ -26,7 +28,7 @@ yarn start
 expo start
 ```
 
-## Emulator Camera Roll Accessibility
+# Emulator Camera Roll Accessibility
 
 Since both Android and iOS emulator do not have accessibility to the camera,
-please make sure to use your own mobile device to test the app.
+please make sure to use your own mobile device to test the camera roll.
