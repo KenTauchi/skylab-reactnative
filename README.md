@@ -2,12 +2,28 @@ This is a tech assessment app for Skylab Technologies Inc with Expo for React Na
 
 ## Getting Started
 
-Please run the development server first:
+Since the app is built with Expo, please install Expo first:
 
 ```bash
-npm run start
+npm install expo
+# or
+yarn add expo
+```
+
+- If you use npm to install expo, please also install these packages with the command below:
+
+```bash
+expo install expo-camera expo-image-picker
+```
+
+Please run the development server second:
+
+```bash
+npm start
 # or
 yarn start
+# or
+expo start
 ```
 
 ## Emulator Camera Roll Accessibility
